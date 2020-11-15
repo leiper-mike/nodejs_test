@@ -21,59 +21,40 @@ function mathRound(a, b, c, d, e, f, target) {
             for (k = 0; k < 4; k++) {
                 offset = 0;
                 for (k1 = 0; k1 < 2; k1++) {
-                    if (k + offset == i || k + offset == jOffset) //check both with offset
+                    if (k + offset == i || k + offset == jOffset) 
                         offset++;
                 }
-                //if (k == i && offset < 2)
-                //    offset++;
-                //if (k + offset == jOffset && offset < 2)
-                //    offset++;
                 let z = inputs[k + offset];
                 let kOffset = k + offset;
                 for (l = 0; l < 3; l++) {
                     offset = 0;
                     for (l1 = 0; l1 < 3; l1++) {
-                        if (l + offset == i || l + offset == jOffset || l + offset == kOffset) //check both with offset
+                        if (l + offset == i || l + offset == jOffset || l + offset == kOffset) 
                             offset++;
                     }
-                    //if (l == i && offset < 3)
-                    //    offset++;
-                    //if (l + offset == jOffset && offset < 3)
-                    //    offset++;
-                    //if (l + offset == kOffset && offset < 3)
-                    //    offset++;
                     let w = inputs[l + offset];
                     let lOffset = l + offset;
                     for (m = 0; m < 2; m++) {
                         offset = 0;
                         for (m1 = 0; m1 < 4; m1++) {
-                            if (m + offset == i || m + offset == jOffset || m + offset == kOffset || m + offset == lOffset) //check both with offset
+                            if (m + offset == i || m + offset == jOffset || m + offset == kOffset || m + offset == lOffset) 
                                 offset++;
-                        }
-                        //if (m == i && offset < 4)
-                        //    offset++;
-                        //if (m + offset == jOffset && offset < 4)
-                        //    offset++;
-                        //if (m + offset == kOffset && offset < 4)
-                        //    offset++;
-                        //if (m + offset == lOffset && offset < 4)
-                        //    offset++;
-                        u = inputs[m + offset];
+                        }                        u = inputs[m + offset];
                         let mOffset = m + offset;
                         for (g = 0; g < 6; g++) {
                             offset = 0;
                             if (g != i && g != jOffset && g != lOffset && g != mOffset && g != kOffset) {
                                 v = inputs[g];
-                            }
-                                
+                            }   
                         }
+                        //previous 6 loops determine which numbers to use in what order
                         //math witchcraft
                         for (n = 0; n < 4; n++) {
-                            if (n == 3 && doMaths(x, y, n) != -1)
+                            if (n == 3 && doMaths(x, y, n) != -1) //divides only if there is no remainder
                                 math1 = doMaths(x, y, n);
                             else if (n != 3)
                                 math1 = doMaths(x, y, n);
-                            if (closer(math1, closest, target) == 1) {
+                            if (closer(math1, closest, target) == 1) { //if the result of the operation is closer to the target than the current best number, replace the best number and add the proof
                                 closest = math1;
                                 proof = "" + x + operations(n) + y + " = " + math1;
                             }
