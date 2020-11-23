@@ -35,6 +35,7 @@
     <Content Include="CodingBatMethods.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="DICTIONARY.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>

@@ -45,6 +45,12 @@ function fixTeen(n) {
         return 0;
     return n;
 }
+//euler square
+//brussels choice
+//15 puzzle
+    //check if possible
+    //solve somehow
+//4 fours
 exports.loneSum = loneSum;
 exports.blackJack = blackJack;
 exports.noTeenSum = noTeenSum;
