@@ -37,7 +37,7 @@ while (true) {
             var b = prompt('Integer b:')
             var c = prompt('Integer c:')
             var d = prompt('Integer d:')
-            var e = prompt('Integer e:')
+            var e = prompt('Integer e:') 
             var f = prompt('Integer f:')
             var target = prompt('Target:')
             console.log(countdown.mathRound(a,b,c,d,e,f,target));
@@ -54,9 +54,6 @@ while (true) {
             var h = prompt('8th letter:')
             var i = prompt('9th letter:')
             console.log(countdown.lettersRound(a,b,c,d,e,f,g,h,i, nums));
-            break;
-        case 6:
-            console.log(countdown.count());
             break;
         default:
             console.log('Please enter a valid choice');

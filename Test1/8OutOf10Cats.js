@@ -168,72 +168,7 @@ function lettersRound(a, b, c, d, e, f, g, h, i, nums) {
             return "ERROR: Input must be letters only";
         }
     }
-    //let let1, let2, let3, let4, let5, let6, let7, let8, let9, word;
-    //let kAvailable, lAvailable, mAvailable, nAvailable, oAvailable, pAvailable, qAvailable;
-    //let combos3,combos4,combos5,combos6,combos7,combos8,combos9;
-    //combos3 = [new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array()];
-    //combos4 = [new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array()];
-    //combos5 = [new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array()];
-    //combos6 = [new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array()];
-    //combos7 = [new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array()];
-    //combos8 = [new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array()];
-    //combos9 = [new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array()];
-    //for (j = 0; j < 9; j++) {
-    //    let1 = inputs[j];        
-    //    for (k = 0; k < 8; k++) {
-    //        kAvailable = inputs.map((x) => x);
-    //        kAvailable.splice(j, 1);
-    //        let2 = kAvailable[k];
-    //        for (l = 0; l < 7; l++) {
-    //            lAvailable = kAvailable.map((x) => x);
-    //            lAvailable.splice(k, 1);
-    //            let3 = lAvailable[l];
-    //            combos3[j].push(let1 + let2 + let3);
-    //            for (m = 0; m < 6; m++) {
-    //                mAvailable = lAvailable.map((x) => x);
-    //                mAvailable.splice(l, 1);
-    //                let4 = mAvailable[m];
-    //                combos4[j].push(let1 + let2 + let3 + let4);
-    //                for (n = 0; n < 5; n++) {
-    //                    nAvailable = mAvailable.map((x) => x);
-    //                    nAvailable.splice(m, 1);
-    //                    let5 = nAvailable[n];
-    //                    combos5[j].push(let1 + let2 + let3 + let4 + let5);
-    //                    for (o = 0; o < 4; o++) {
-    //                        oAvailable = nAvailable.map((x) => x);
-    //                        oAvailable.splice(n, 1);
-    //                        let6 = oAvailable[o];
-    //                        combos6[j].push(let1 + let2 + let3 + let4 + let5 + let6);
-    //                        for (p = 0; p < 3; p++) {
-    //                            pAvailable = oAvailable.map((x) => x);
-    //                            pAvailable.splice(o, 1);
-    //                            let7 = pAvailable[p];
-    //                            combos7[j].push(let1 + let2 + let3 + let4 + let5 + let6 + let7);
-    //                            for (q = 0; q < 2; q++) {
-    //                                qAvailable = pAvailable.map((x) => x);
-    //                                qAvailable.splice(p, 1);
-    //                                let8 = qAvailable[q];
-    //                                combos8[j].push(let1 + let2 + let3 + let4 + let5 + let6 + let7 + let8);
-
-    //                                rAvailable = qAvailable.map((x) => x);
-    //                                rAvailable.splice(q, 1);
-    //                                let9 = rAvailable[0];
-    //                                word = let1 + let2 + let3 + let4 + let5 + let6 + let7 + let8 + let9;
-    //                                combos9[j].push(word);
-    //                                }
-    //                            }
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-    //let combos = [combos3,combos4,combos5,combos6,combos7,combos8,combos9]
-    //let results = search(combos,nums, inputs);
-    //let ret = "";
-    //for (let key in results) {
-    //    ret += "Length: " + key.length + ", " + key + "-  " + results[key] + '\n';
-    //}
+   
     var u = "";
     for (p = 0; p < inputs.length; p++) {
         u += inputs[p];
@@ -266,50 +201,6 @@ function lettersRound(a, b, c, d, e, f, g, h, i, nums) {
         }
 
     }
-    return ret;
-}
-//searches the dictionary for words from the list of combinations 
-function search(a,nums, inputs) {
-    //let words = JSON.parse(fs.readFileSync('DICTIONARY.json'));
-    let ret = '';
-    //let count = 0;
-    //for (i = 6; i >= 0 && count < nums; i--) // controls how long word is
-    //{
-    //    for (j = 0; j < 9; j++) //controls which letter to start on
-    //    {
-    //        for (var str in words[letters(inputs[j])][i]) {
-    //            var x = 1;
-    //            while (str.includes(inputs[x])) {
-    //                str = str.replace(inputs[x], '');
-    //                x++;
-    //            }
-    //            if (str === letters(inputs[j])) {
-    //                ret += str;
-    //                count++;
-    //            }
-    //        }
-    //    }
-
-    //}
-
-
-
-    //for (i = 6; i >= 0 && count < nums ; i--) {
-    //    for (j = 0; j < a[i].length && count < nums; j++) {
-    //        str = a[i][j];
-    //        ;
-    //        for (key in y) {
-    //            if (key == str) {
-    //                ret[str] = y[key];
-    //                count++
-    //                break;
-    //            }
-    //            if (key.slice(1, 2).localeCompare(str.slice(1, 2)) > 0) {
-    //                break;
-    //            }
-    //        }
-    //    }
-    //}
     return ret;
 }
 function letters(a) {
@@ -398,19 +289,5 @@ function letters(a) {
             return -1;
     }
 }
-function count() {
-    let ret = 0;
-    let words = JSON.parse(fs.readFileSync('DICTIONARY.json'));
-    for (i = 0; i < words.length; i++) {
-        for (key in words[i]) {
-            //if (key.length > 9 || key.length < 2) {
-            //    delete words[i][key];
-            //}
-            ret++;
-        }
-    }
-    return ret;
-}
-exports.count = count;
 exports.lettersRound = lettersRound;
 exports.mathRound = mathRound;
